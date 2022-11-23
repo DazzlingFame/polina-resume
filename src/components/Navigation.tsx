@@ -1,46 +1,43 @@
 import React from "react";
-import styled from "styled-components";
-
-const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: yellow;
-  flex-direction: column;
-  align-items: center;
-    padding: 24px;
-`;
-
-const NavigationContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const NavigationItem = styled.div`
-    margin-right: 24px;
-    &:last-child {
-        margin-right: 0;
-    }
-`;
-
-const ResumeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import {
+  Container,
+  NavigationContainer,
+  NavigationTitle,
+  ResumeContainer,
+  NavigationItem,
+  ResumeDownload,
+  ResumeTitle,
+  NavigationImage,
+} from "./NavigationStyles";
 
 export const Navigation: React.FC = () => {
   return (
     <Container>
       <NavigationContainer>
-        <NavigationItem>Амбиции</NavigationItem>
-        <NavigationItem>Бла</NavigationItem>
-        <NavigationItem>Бла</NavigationItem>
-        <NavigationItem>Бла</NavigationItem>
-        <NavigationItem>Бла</NavigationItem>
+        <NavigationItem>
+          <NavigationTitle>Ambitions</NavigationTitle>
+          <NavigationImage
+            src={
+              "https://thumb.tildacdn.com/tild3263-6636-4038-b266-306665376432/-/resize/200x/-/format/webp/11.png"
+            }
+            alt={"blah"}
+          />
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationTitle>Next Block</NavigationTitle>
+          <NavigationImage
+            src={
+              "https://thumb.tildacdn.com/tild3263-6636-4038-b266-306665376432/-/resize/200x/-/format/webp/11.png"
+            }
+            alt={"blah"}
+          />
+        </NavigationItem>
       </NavigationContainer>
       <ResumeContainer>
-        Скачайте меня
-        <a href={"yandex.ru"}>Качать</a>
+        <ResumeTitle>Принимаю роботы для рассмотрения</ResumeTitle>
+        <ResumeDownload href={"http://yandex.ru"}>
+          Скачать резюме
+        </ResumeDownload>
       </ResumeContainer>
     </Container>
   );
