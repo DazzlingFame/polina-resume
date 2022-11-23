@@ -34,6 +34,7 @@ export const NavigationTitle = styled.span`
 
 export const NavigationImage = styled.img`
   margin-top: 24px;
+  max-width: 20vw;
 `;
 
 export const ResumeContainer = styled.div`
